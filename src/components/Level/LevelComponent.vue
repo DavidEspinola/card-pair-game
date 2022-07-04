@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from '@vue/reactivity';
 import { reactive, watchEffect } from 'vue';
-import { Level } from '../entities/Level'
-import { wait } from '../utils/wait';
-import CardComponent from './CardComponent.vue'
+import { Level } from './Level'
+import { wait } from '../../utils/wait';
+import CardComponent from '../Card/CardComponent.vue'
 
 const props = defineProps<{ cards: number, lives: number }>()
 const level = computed(() => reactive(new Level(props.cards, props.lives)))

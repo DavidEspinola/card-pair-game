@@ -1,9 +1,9 @@
 import sampleSize from "lodash/sampleSize"
 import shuffle from "lodash/shuffle"
 
-import { Card } from './Card'
-import { wait } from "../utils/wait"
-import { getSupportedEmojis } from "../utils/emojis"
+import { Card } from '../Card/Card'
+import { wait } from "../../utils/wait"
+import { getSupportedEmojis } from "../../utils/emojis"
 
 export class Level {
     cards: Card[]

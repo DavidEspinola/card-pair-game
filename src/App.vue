@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LevelComponent from './components/LevelComponent.vue'
+import LevelComponent from './components/Level/LevelComponent.vue'
 
 </script>
 
