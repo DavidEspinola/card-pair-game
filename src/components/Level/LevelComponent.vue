@@ -53,7 +53,9 @@ watchEffect(async () => {
         color: red
     .card-grid
       display: grid
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
-      gap: 30px
+      gap: 20px
       margin: 15px
+      grid-template-columns: repeat(4, 1fr)
+      @media screen and (min-width: 1200px) 
+        grid-template-columns: repeat(8, 1fr)
 </style>
