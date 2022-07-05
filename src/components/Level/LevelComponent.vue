@@ -41,7 +41,7 @@ watchEffect(async () => {
 <style lang="sass" scoped>
   .level
     width: 100%
-    max-width: 1840px
+    max-width: 1200px
     .board
       margin: 30px 15px
       display: flex
@@ -58,6 +58,4 @@ watchEffect(async () => {
       grid-template-columns: repeat(4, 1fr)
       @media screen and (max-width: 500px)
         grid-template-columns: repeat(2, 1fr)
-      @media screen and (min-width: 1200px) 
-        grid-template-columns: repeat(8, 1fr)
 </style>
