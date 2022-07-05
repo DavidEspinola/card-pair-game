@@ -43,7 +43,7 @@ export class Level {
         } else {
             card.toggleVisibility()
             this.lives--
-            await wait(1500)
+            await wait(1000)
             this.selectedCard.toggleVisibility()
             this.selectedCard = null
             card.toggleVisibility()

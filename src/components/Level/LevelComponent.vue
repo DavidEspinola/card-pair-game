@@ -12,7 +12,7 @@ const clickableCards = computed(() => level.value.interactive && !level.value.is
 watchEffect(async () => {
   if (level.value.isVictory) {
     await wait(500)
-    alert('Victory!')
+    alert('You win!')
     window.location.reload()
   } else if (level.value.isGameOver) {
     await wait(500)
@@ -56,6 +56,8 @@ watchEffect(async () => {
       gap: 20px
       margin: 15px
       grid-template-columns: repeat(4, 1fr)
+      @media screen and (max-width: 500px)
+        grid-template-columns: repeat(2, 1fr)
       @media screen and (min-width: 1200px) 
         grid-template-columns: repeat(8, 1fr)
 </style>

@@ -12,5 +12,4 @@ import LevelComponent from './components/Level/LevelComponent.vue'
     display: flex
     flex-grow: 1
     justify-content: center
-
 </style>
