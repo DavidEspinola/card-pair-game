@@ -1,17 +1,13 @@
 <script setup lang="ts">
-import { Card } from './Card'
+import { Card } from "./Card";
+import Emoji from "../Emoji.vue";
 
-defineProps<{ card: Card }>()
-
+defineProps<{ card: Card }>();
 </script>
 
 <template>
   <a href="" class="card">
-    <div class="emoji" v-if="card.isVisible">
-      <svg viewBox="0 0 16 16">
-        <text x="50%" y="50%">{{ card.emoji }}</text>
-      </svg>
-    </div>
+    <Emoji v-if="card.isVisible" :emoji="card.emoji"></Emoji>
     <span v-else class="back"></span>
   </a>
 </template>
@@ -27,18 +23,7 @@ defineProps<{ card: Card }>()
   justify-content: center
   align-items: center
   padding: 5%
-  .emoji
-    width: 100%
-    height: 100%
-    svg 
-      width: 100%
-      height: 100%
-      text
-        dominant-baseline: central
-        text-anchor: middle
-        width: 100%
-        height: 100%
-        
+
   .back
     width: 100%
     height: 100%

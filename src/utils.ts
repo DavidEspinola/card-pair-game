@@ -1,7 +1,18 @@
 import emojis from 'emojis-list'
+import sampleSize from "lodash/sampleSize"
+
+export function getRandomEmojis(quantity: number) {
+    return sampleSize(getSupportedEmojis(), quantity)!
+}
+
+export function wait(ms: number) {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms)
+    })
+}
 
 // Based on https://stackoverflow.com/a/45576797
-export function getSupportedEmojis() {
+function getSupportedEmojis() {
     const ctx = document.createElement("canvas").getContext("2d")!
     ctx.canvas.width = ctx.canvas.height = 1
     return emojis.filter(emoji => {

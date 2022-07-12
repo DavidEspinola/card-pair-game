@@ -1,9 +1,7 @@
-import sampleSize from "lodash/sampleSize"
 import shuffle from "lodash/shuffle"
 
 import { Card } from '../Card/Card'
-import { wait } from "../../utils/wait"
-import { getSupportedEmojis } from "../../utils/emojis"
+import { getRandomEmojis, wait } from "../../utils"
 
 export class Level {
     cards: Card[]
@@ -52,10 +50,7 @@ export class Level {
     }
 
     private createCards() {
-        const emojis = getSupportedEmojis()
-        const emojisToshow = sampleSize(emojis, this.cardNum / 2)!
-
-        const pairedCards = emojisToshow.reduce((result, emoji) => {
+        const pairedCards = getRandomEmojis(this.cardNum / 2).reduce((result, emoji) => {
             result.push(new Card(emoji), new Card(emoji))
             return result
         }, [] as Card[])
